@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Typography, Divider } from "antd";
+import "./App.css";
+import TodoList from "./components/TodoList";
+import Filters from "./components/Filters";
+
+const { Title } = Typography;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="app">
+			<Title style={{ textAlign: "center" }}>
+				<span style={{ position: "relative", top: 4 }}>TODOS APP</span>
+				❤️
+			</Title>
+			<Filters />
+			<Divider />
+			<TodoList />
+		</div>
+	);
 }
 
 export default App;
