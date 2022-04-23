@@ -1,5 +1,5 @@
 // localStorage.setItem("todos", JSON.stringify(initState));
-const initState = JSON.parse(localStorage.getItem("todos"));
+const initState = JSON.parse(localStorage.getItem("todos")) || [];
 
 const todoListReducer = (state = initState, action) => {
 	switch (action.type) {
